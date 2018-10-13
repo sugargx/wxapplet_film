@@ -1,0 +1,5 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+
+<view>
+   <text>{{movie.original_title}}</text>
+</view>

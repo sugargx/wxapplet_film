@@ -1,0 +1,36 @@
+/* pages/movie/movie.wxss */
+.swiper{
+  height: 375rpx;
+}
+
+.movie-list{
+  margin-top: 50rpx;
+  /* 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行。 */
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie-item {
+    margin-bottom: 50rpx;
+    padding: 0 25rpx;
+    width: 203rpx; 
+}
+.movie-item .movie-img {
+    width: 100%;
+    height: 280rpx;
+}
+.movie-item .movie-name {
+    text-align: center;
+    font-size: 34rpx;
+    color: #444;
+}
+.rating-stars{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: gray;
+}
+.rating-stars image{
+  width: 30rpx;
+  height: 30rpx;
+}

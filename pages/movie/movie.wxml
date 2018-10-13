@@ -1,0 +1,38 @@
+<!--pages/movie/movie.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style='width:100%; height:375rpx;' />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="movie-list">
+
+  <block wx:for="{{movies}}" wx:for-item="movie">
+
+    <view class='movie-item'>
+      <image class="movie-img'" src='{{movie.images.large}}' bindtap='showMovieDetail' id='{{movie.id}}'></image>
+      <view class='movie-name'>
+        <text>{{movie.original_title}}</text>
+      </view>
+
+      <view class='rating-stars'>
+        <block wx:for="{{[0,1,2,3,4]}}" wx:for-item="num">
+          <block wx:if="{{num < movie.rating.average/2}}">
+            <image src='../../images/star-fill.png'></image>
+          </block>
+          <block wx:else>
+            <image src='../../images/star-emp.png'></image>
+          </block>
+        </block>
+
+        <text>{{movie.rating.average}}</text>
+
+      </view>
+    </view>
+
+  </block>
+
+
+</view>
